@@ -32,6 +32,24 @@
   order: -30 !important;
 }
 
+/* Reorder Tab Context Menu: Place "Open in Side View" right below "New Tab Below" */
+#tabContextMenu {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#tabContextMenu #context_openANewTab {
+  order: -20 !important;
+}
+
+#tabContextMenu :is(menuitem[label="Open in Side View"], [id*="open-in-sidebar"], [id*="side-view"]) {
+  order: -10 !important;
+}
+
+#tabContextMenu menuseparator:has(+ :is(menuitem[label="Open in Side View"], [id*="open-in-sidebar"], [id*="side-view"])) {
+  display: none !important;
+}
+
 /* Narrow Sidebar Test (~30% smaller than 169px; delete below to revert) */
 #navigator-toolbox[zen-sidebar-expanded="true"] {
   --zen-toolbox-min-width: 120px !important;
