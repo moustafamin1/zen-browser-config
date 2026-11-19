@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "Zen Translate Page Context Menu",
+  "version": "1.1",
+  "description": "Adds Translate this page / Undo translation under Reload in the page context menu.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "zen-translate-page@local",
+      "strict_min_version": "115.0"
+    }
+  },
+  "permissions": [
+    "menus",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "experiment_apis": {
+    "zenTranslatePage": {
+      "schema": "schema.json",
+      "parent": {
+        "scopes": [
+          "addon_parent"
+        ],
+        "paths": [
+          [
+            "zenTranslatePage"
+          ]
+        ],
+        "script": "api.js"
+      }
+    }
+  }
+}

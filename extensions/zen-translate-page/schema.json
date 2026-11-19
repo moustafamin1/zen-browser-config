@@ -1,0 +1,29 @@
+[
+  {
+    "namespace": "zenTranslatePage",
+    "functions": [
+      {
+        "name": "isTranslated",
+        "type": "function",
+        "async": true,
+        "parameters": [
+          {
+            "name": "tabId",
+            "type": "integer"
+          }
+        ]
+      },
+      {
+        "name": "translateOrUndo",
+        "type": "function",
+        "async": true,
+        "parameters": [
+          {
+            "name": "tabId",
+            "type": "integer"
+          }
+        ]
+      }
+    ]
+  }
+]

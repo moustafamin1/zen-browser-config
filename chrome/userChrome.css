@@ -1,0 +1,151 @@
+/* Reorder Context Menu: Force Native Emoji & Symbols to top (Chrome-style) */
+#contentAreaContextMenu {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#contentAreaContextMenu menuitem[label="Emoji & Symbols"],
+#contentAreaContextMenu [id*="zen-native-emoji"] {
+  order: -100 !important;
+  border-bottom: 1px solid var(--panel-separator-color, rgba(127, 127, 127, 0.25)) !important;
+  margin-bottom: 4px !important;
+  padding-bottom: 4px !important;
+}
+
+#contentAreaContextMenu menuseparator[id*="zen-native-emoji"] {
+  display: none !important;
+}
+
+#contentAreaContextMenu #context-back,
+#contentAreaContextMenu #context-forward,
+#contentAreaContextMenu #context-reload,
+#contentAreaContextMenu #context-stop {
+  order: -50 !important;
+}
+
+#contentAreaContextMenu menuitem[label="Translate this page"],
+#contentAreaContextMenu menuitem[label="Undo translation"] {
+  order: -40 !important;
+}
+
+#contentAreaContextMenu #context-sep-navigation {
+  order: -30 !important;
+}
+
+/* Narrow Sidebar Test (~30% smaller than 169px; delete below to revert) */
+#navigator-toolbox[zen-sidebar-expanded="true"] {
+  --zen-toolbox-min-width: 120px !important;
+  --zen-sidebar-width: 120px !important;
+  width: 120px !important;
+  min-width: 120px !important;
+  max-width: 120px !important;
+}
+
+/* Top bar: fit traffic lights + hide Back/Forward/Overflow until hover */
+#navigator-toolbox[zen-sidebar-expanded="true"] #zen-sidebar-top-buttons {
+  padding-inline: 0 !important;
+}
+
+#navigator-toolbox[zen-sidebar-expanded="true"] #zen-sidebar-top-buttons .titlebar-buttonbox-container {
+  margin-inline-end: 0 !important;
+}
+
+#navigator-toolbox[zen-sidebar-expanded="true"] #zen-sidebar-top-buttons .titlebar-buttonbox {
+  margin-inline-start: 2px !important;
+}
+
+#navigator-toolbox[zen-sidebar-expanded="true"] #zen-sidebar-top-buttons :is(#back-button, #forward-button, #nav-bar-overflow-button, #PanelUI-button) {
+  --toolbarbutton-padding-inner: 2px !important;
+  --toolbarbutton-inner-padding: 2px !important;
+  --toolbarbutton-padding-outer: 0px !important;
+  min-width: 18px !important;
+  width: 18px !important;
+  max-width: 18px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.15s ease, background-color 0.1s !important;
+}
+
+#navigator-toolbox[zen-sidebar-expanded="true"] #zen-sidebar-top-buttons:is(:hover, :has([open="true"]), :has([panelopen])) :is(#back-button, #forward-button, #nav-bar-overflow-button, #PanelUI-button) {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* URL bar (unexpanded): collapse URL text without display:none so focus/new-tab/click still open it */
+:root[zen-single-toolbar="true"] #navigator-toolbox[zen-sidebar-expanded="true"] #urlbar:not([breakout-extend]) .urlbar-input-box {
+  min-width: 0 !important;
+  width: 0 !important;
+  max-width: 0 !important;
+  flex: 0 0 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+
+:root[zen-single-toolbar="true"] #navigator-toolbox[zen-sidebar-expanded="true"] #urlbar:not([breakout-extend]) .urlbar-input-container {
+  justify-content: center !important;
+  gap: 2px !important;
+}
+
+:root[zen-single-toolbar="true"] #navigator-toolbox[zen-sidebar-expanded="true"] #urlbar:not([breakout-extend]) #notification-popup-box:not([open]):not(:has(> [showing="true"])) {
+  display: none !important;
+}
+
+:root[zen-single-toolbar="true"] #navigator-toolbox[zen-sidebar-expanded="true"] #urlbar:not([breakout-extend]) :is(#identity-icon-box, .urlbar-page-action, .unified-extensions-item) {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Vertical tabs: smaller labels + tighter icon-to-text & side spacing */
+#navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs {
+  --toolbarbutton-padding-inner: 4px !important;
+  --tab-icon-end-margin: 4px !important;
+  --tab-padding-inline: 4px !important;
+}
+
+#navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs .tabbrowser-tab {
+  --tab-label-mask-size: 0.45em !important;
+}
+
+#navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs .tabbrowser-tab:not([zen-essential]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay) {
+  margin-inline-start: 0 !important;
+  margin-inline-end: 4px !important;
+}
+
+#navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs .tabbrowser-tab[zen-pinned-changed="true"]:not([zen-essential]) > .tab-stack > .tab-content > .tab-icon-stack {
+  left: 4px !important;
+}
+
+#navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs .tab-reset-pin-button {
+  margin-right: 4px !important;
+}
+
+#navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs :is(.tab-label, zen-folder > .tab-group-label-container > label) {
+  font-size: 13px !important;
+}
+
+#navigator-toolbox[zen-sidebar-expanded="true"] zen-folder > .tab-group-label-container > .tab-group-folder-icon {
+  left: 1px !important;
+}
+
+#navigator-toolbox[zen-sidebar-expanded="true"] zen-folder > .tab-group-label-container > label {
+  padding-inline-start: 26px !important;
+}
+
+#navigator-toolbox[zen-sidebar-expanded="true"] #vertical-tabs-newtab-button {
+  padding-inline: 4px !important;
+  font-size: 13px !important;
+}
+
+#navigator-toolbox[zen-sidebar-expanded="true"] #vertical-tabs-newtab-button image {
+  margin-inline: 0 4px !important;
+}
+
+#navigator-toolbox[zen-sidebar-expanded="true"] .zen-current-workspace-indicator {
+  --indicator-gap: 4px !important;
+  font-size: 13px !important;
+}

@@ -1,0 +1,9 @@
+{
+  "name": "zen_native_emoji",
+  "description": "Trigger macOS native emoji palette in Zen Browser",
+  "path": "PLACEHOLDER_HOME/.local/bin/zen-native-emoji",
+  "type": "stdio",
+  "allowed_extensions": [
+    "zen-native-emoji@local"
+  ]
+}

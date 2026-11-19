@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Native Emoji & Symbols",
+  "version": "1.0",
+  "description": "Restores native macOS Emoji & Symbols to the right-click context menu in Zen Browser",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "zen-native-emoji@local",
+      "strict_min_version": "115.0"
+    }
+  },
+  "permissions": [
+    "contextMenus",
+    "nativeMessaging"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
