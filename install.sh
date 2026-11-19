@@ -71,6 +71,8 @@ ensure_pref() {
 ensure_pref "toolkit.legacyUserProfileCustomizations.stylesheets" "true"
 ensure_pref "xpinstall.signatures.required" "false"
 ensure_pref "extensions.experiments.enabled" "true"
+ensure_pref "widget.macos.native-context-menus" "false"
+ensure_pref "extensions.autoDisableScopes" "0"
 echo "   ✅ user.js updated."
 
 # 3. Install custom extensions (.xpi)
