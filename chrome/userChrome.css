@@ -136,9 +136,6 @@
   padding-inline: 0 !important;
   margin-inline: 0 !important;
   width: 100% !important;
-  --toolbarbutton-padding-inner: 0px !important;
-  --tab-icon-end-margin: 5px !important;
-  --tab-padding-inline: 0px !important;
 }
 
 #navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs .tabbrowser-tab:not([zen-essential]):not([pinned]) {
@@ -157,22 +154,54 @@
 }
 
 #navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs .tabbrowser-tab:not([zen-essential]):not([pinned]) .tab-content {
-  padding-inline-start: 6px !important;
+  padding-inline-start: 12px !important;
   padding-inline-end: 4px !important;
   width: 100% !important;
 }
 
-#navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs .tabbrowser-tab:not([zen-essential]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay) {
+#navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs .tabbrowser-tab:not([zen-essential]):not([pinned]) :is(.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay) {
   margin-inline-start: 0 !important;
-  margin-inline-end: 5px !important;
+  margin-inline-end: 6px !important;
+}
+
+/* Pinned tabs: remove chip borders, remove rounded corners, fix icon & label placement */
+#navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs .tabbrowser-tab[pinned] .tab-background {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+#navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs .tabbrowser-tab[pinned]:not([selected], [multiselected="true"]) .tab-background {
+  background: transparent !important;
+}
+
+#navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs .tabbrowser-tab[pinned] .tab-content {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding-inline: 6px 4px !important;
+}
+
+#navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs .tabbrowser-tab[pinned] .tab-reset-pin-button {
+  display: none !important;
 }
 
 #navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs .tabbrowser-tab[zen-pinned-changed="true"]:not([zen-essential]) > .tab-stack > .tab-content > .tab-icon-stack {
-  left: 6px !important;
+  position: static !important;
+  transform: none !important;
+  left: auto !important;
+  margin: 0 !important;
+  margin-inline-end: 5px !important;
+  pointer-events: auto !important;
 }
 
-#navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs .tab-reset-pin-button {
-  margin-right: 4px !important;
+#navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs .tabbrowser-tab[pinned] .tab-label-container {
+  display: flex !important;
+  align-items: center !important;
+  min-width: 0 !important;
+  opacity: 1 !important;
 }
 
 /* Hide tab close button when not hovering so tab title gets maximum horizontal space */
@@ -184,21 +213,23 @@
   font-size: 13px !important;
 }
 
+/* Folders: fix icon alignment and restore clean spacing to title */
 #navigator-toolbox[zen-sidebar-expanded="true"] zen-folder > .tab-group-label-container {
-  padding-inline-start: 6px !important;
+  padding-inline-start: 0 !important;
   padding-inline-end: 4px !important;
 }
 
 #navigator-toolbox[zen-sidebar-expanded="true"] zen-folder > .tab-group-label-container > .tab-group-folder-icon {
-  left: 6px !important;
+  left: 10px !important;
 }
 
 #navigator-toolbox[zen-sidebar-expanded="true"] zen-folder > .tab-group-label-container > label {
-  padding-inline-start: 24px !important;
+  padding-inline-start: 42px !important;
 }
 
 #navigator-toolbox[zen-sidebar-expanded="true"] #vertical-tabs-newtab-button {
-  padding-inline: 6px 4px !important;
+  padding-inline-start: 12px !important;
+  padding-inline-end: 4px !important;
   margin-inline: 0 !important;
   width: 100% !important;
   border-radius: 0 !important;
@@ -206,13 +237,15 @@
 }
 
 #navigator-toolbox[zen-sidebar-expanded="true"] #vertical-tabs-newtab-button image {
-  margin-inline: 0 5px !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 6px !important;
 }
 
 #navigator-toolbox[zen-sidebar-expanded="true"] .zen-current-workspace-indicator {
-  --indicator-gap: 4px !important;
+  --indicator-gap: 6px !important;
   font-size: 13px !important;
-  padding-inline: 6px 4px !important;
+  padding-inline-start: 12px !important;
+  padding-inline-end: 4px !important;
 }
 
 /* Media controls: compact buttons so audio/mute icon fits inside 120px sidebar */
