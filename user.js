@@ -82,3 +82,5 @@ user_pref("mod.autoexpand.fade_sleeping_tabs", false);
 user_pref("mod.autoexpand.hide_workspace_indicator", true);
 user_pref("mod.autoexpand.performance_mode", "potato");
 user_pref("mod.autoexpand.remove_line_separator", true);
+user_pref("zen.theme.content-element-separation", 0);
+user_pref("zen.theme.border-radius", 0);
