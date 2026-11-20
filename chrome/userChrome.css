@@ -158,7 +158,7 @@
 }
 
 #navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs .tabbrowser-tab:not([zen-essential]):not([pinned]) .tab-content {
-  padding-inline-start: 12px !important;
+  padding-inline-start: 6px !important;
   padding-inline-end: 4px !important;
   width: 100% !important;
 }
@@ -178,7 +178,7 @@
   flex-direction: row !important;
   align-items: center !important;
   justify-content: flex-start !important;
-  padding-inline: 12px 4px !important;
+  padding-inline: 6px 4px !important;
 }
 
 #navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs .tabbrowser-tab[pinned]:not([zen-essential]) .tab-reset-pin-button {
@@ -190,7 +190,6 @@
   transform: none !important;
   left: auto !important;
   margin: 0 !important;
-  margin-inline-end: 6px !important;
   pointer-events: auto !important;
 }
 
@@ -207,14 +206,8 @@
   margin-inline: 0 !important;
 }
 
-#navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs tab-group[split-view-group] > .tab-group-container > .tabbrowser-tab:first-child .tab-content {
-  padding-inline-start: 12px !important;
-  padding-inline-end: 4px !important;
-}
-
-#navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs tab-group[split-view-group] > .tab-group-container > .tabbrowser-tab:not(:first-child) .tab-content {
-  padding-inline-start: 6px !important;
-  padding-inline-end: 4px !important;
+#navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs tab-group[split-view-group] > .tab-group-container > .tabbrowser-tab .tab-content {
+  padding-inline: 6px 4px !important;
 }
 
 #navigator-toolbox[zen-sidebar-expanded="true"] #tabbrowser-tabs tab-group[split-view-group] > .tab-group-container > .tabbrowser-tab:not(:hover) .tab-close-button {
@@ -230,22 +223,22 @@
   font-size: 13px !important;
 }
 
-/* Folders: match icon-to-text gap with regular tabs */
+/* Folders: align left edge with B1 icon and preserve icon-to-text gap */
 #navigator-toolbox[zen-sidebar-expanded="true"] zen-folder > .tab-group-label-container {
   padding-inline-start: 0 !important;
   padding-inline-end: 4px !important;
 }
 
 #navigator-toolbox[zen-sidebar-expanded="true"] zen-folder > .tab-group-label-container > .tab-group-folder-icon {
-  left: 7px !important;
+  left: 1px !important;
 }
 
 #navigator-toolbox[zen-sidebar-expanded="true"] zen-folder > .tab-group-label-container > label {
-  padding-inline-start: 35px !important;
+  padding-inline-start: 29px !important;
 }
 
 #navigator-toolbox[zen-sidebar-expanded="true"] #vertical-tabs-newtab-button {
-  padding-inline-start: 12px !important;
+  padding-inline-start: 6px !important;
   padding-inline-end: 4px !important;
   margin-inline: 0 !important;
   width: 100% !important;
@@ -261,7 +254,7 @@
 #navigator-toolbox[zen-sidebar-expanded="true"] .zen-current-workspace-indicator {
   --indicator-gap: 6px !important;
   font-size: 13px !important;
-  padding-inline-start: 12px !important;
+  padding-inline-start: 6px !important;
   padding-inline-end: 4px !important;
 }
 
