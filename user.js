@@ -89,3 +89,30 @@ user_pref("zen.theme.border-radius", 0);
 // Auto-sleep / unload inactive background tabs after 3 minutes (180,000 ms)
 user_pref("browser.tabs.unloadOnLowMemory", true);
 user_pref("browser.tabs.min_inactive_duration_before_unload", 180000);
+
+// --- 9. Window Performance & Opaque Buffer ---
+// Disable macOS NSVisualEffectView vibrancy and acrylic blur passes
+user_pref("zen.widget.macos.window-vibrancy", false);
+user_pref("zen.theme.acrylic-sidebar", false);
+user_pref("zen.theme.acrylic-urlbar", false);
+user_pref("zen.theme.gradient.show-custom-colors", false);
+
+// --- 10. Hardware Acceleration & WebRender ---
+user_pref("media.hardware-video-decoding.enabled", true);
+user_pref("gfx.webrender.all", true);
+
+// --- 11. Disable Telemetry & Background Ping Cycles ---
+user_pref("datareporting.healthreport.uploadEnabled", false);
+user_pref("datareporting.policy.dataSubmissionEnabled", false);
+user_pref("toolkit.telemetry.enabled", false);
+user_pref("toolkit.telemetry.unified", false);
+user_pref("toolkit.telemetry.archive.enabled", false);
+user_pref("browser.ping-centre.telemetry", false);
+user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
+user_pref("browser.newtabpage.activity-stream.telemetry", false);
+user_pref("experiments.supported", false);
+user_pref("experiments.enabled", false);
+
+// --- 12. Network & Prefetch Optimization ---
+// Prevent background speculative pre-fetching of unclicked links
+user_pref("network.prefetch-next", false);

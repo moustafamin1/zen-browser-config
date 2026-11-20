@@ -337,3 +337,14 @@
   corner-shape: unset !important;
   margin: 0px !important;
 }
+
+/* Performance: Disable grain noise shaders and SVG backdrop filters */
+.zen-browser-generic-background {
+  --zen-grain-texture: none !important;
+  --zen-grain-texture-old: none !important;
+  display: none !important;
+}
+
+:root {
+  --zen-backdrop-underlay: none !important;
+}

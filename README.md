@@ -40,6 +40,13 @@ Production configuration, UI stylesheets, Zen mods, extensions, and macOS native
    - Zero element separation and zero padding across top, bottom, and right window boundaries.
    - Stripped web view corner radii and drop shadows for a seamless, immersive full-bleed layout.
 
+8. **Performance, Memory & Privacy Tuning:**
+   - 3-minute aggressive background tab memory release (`180000ms`).
+   - Opaque Metal buffer: disabled macOS window vibrancy and acrylic blur overheads.
+   - Stripped background grain noise shaders and SVG backdrop filters.
+   - Completely silenced Mozilla telemetry, background pings, and experiment shield studies.
+   - Disabled speculative pre-fetching of unclicked links to conserve RAM and bandwidth.
+
 ---
 
 ## 🤖 Agent Onboarding & Migration
