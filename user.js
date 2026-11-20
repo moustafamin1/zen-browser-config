@@ -90,12 +90,10 @@ user_pref("zen.theme.border-radius", 0);
 user_pref("browser.tabs.unloadOnLowMemory", true);
 user_pref("browser.tabs.min_inactive_duration_before_unload", 180000);
 
-// --- 9. Window Performance & Opaque Buffer ---
-// Disable macOS NSVisualEffectView vibrancy and acrylic blur passes
-user_pref("zen.widget.macos.window-vibrancy", false);
-user_pref("zen.theme.acrylic-sidebar", false);
-user_pref("zen.theme.acrylic-urlbar", false);
-user_pref("zen.theme.gradient.show-custom-colors", false);
+// --- 9. Window Vibrancy & Visual Appearance ---
+// Restore macOS window vibrancy and pitch-black sidebar
+user_pref("zen.widget.macos.window-vibrancy", true);
+user_pref("zen.theme.acrylic-urlbar", true);
 
 // --- 10. Hardware Acceleration & WebRender ---
 user_pref("media.hardware-video-decoding.enabled", true);

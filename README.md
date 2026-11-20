@@ -42,8 +42,8 @@ Production configuration, UI stylesheets, Zen mods, extensions, and macOS native
 
 8. **Performance, Memory & Privacy Tuning:**
    - 3-minute aggressive background tab memory release (`180000ms`).
-   - Opaque Metal buffer: disabled macOS window vibrancy and acrylic blur overheads.
-   - Stripped background grain noise shaders and SVG backdrop filters.
+   - Hardware-accelerated WebRender & Metal video decoding.
+   - Preserved macOS window vibrancy and pitch-black sidebar styling.
    - Completely silenced Mozilla telemetry, background pings, and experiment shield studies.
    - Disabled speculative pre-fetching of unclicked links to conserve RAM and bandwidth.
 
