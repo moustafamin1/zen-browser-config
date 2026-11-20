@@ -306,3 +306,28 @@
   margin: 0 !important;
   min-width: 20px !important;
 }
+
+/* Step 1: Window frame & outer border removal */
+:root,
+#main-window,
+#browser,
+#navigator-toolbox,
+#zen-main-app-wrapper,
+#zen-appcontent-wrapper,
+.zen-toolbar-background,
+.zen-toolbar-background::before,
+.zen-toolbar-background::after {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  --zen-colors-border: transparent !important;
+  --zen-colors-border-contrast: transparent !important;
+  --zen-appcontent-border: none !important;
+}
+
+#navigator-toolbox {
+  border-right: none !important;
+  border-left: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
