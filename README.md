@@ -36,6 +36,10 @@ Production configuration, UI stylesheets, Zen mods, extensions, and macOS native
    - `zen-native-emoji@local.xpi`: macOS native emoji picker integration.
    - `zen-google-fix@local.xpi`: Voice recording, layout, and compatibility patches for Google Web Apps.
 
+7. **Edge-to-Edge Web Canvas:**
+   - Zero element separation and zero padding across top, bottom, and right window boundaries.
+   - Stripped web view corner radii and drop shadows for a seamless, immersive full-bleed layout.
+
 ---
 
 ## 🤖 Agent Onboarding & Migration
