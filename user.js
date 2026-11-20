@@ -84,3 +84,8 @@ user_pref("mod.autoexpand.performance_mode", "potato");
 user_pref("mod.autoexpand.remove_line_separator", true);
 user_pref("zen.theme.content-element-separation", 0);
 user_pref("zen.theme.border-radius", 0);
+
+// --- 8. Tab Memory Optimization ---
+// Auto-sleep / unload inactive background tabs after 3 minutes (180,000 ms)
+user_pref("browser.tabs.unloadOnLowMemory", true);
+user_pref("browser.tabs.min_inactive_duration_before_unload", 180000);
